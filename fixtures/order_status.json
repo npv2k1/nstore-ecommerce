@@ -1,0 +1,92 @@
+[
+    {
+        "model": "order.orderstatus",
+        "pk": 1,
+        "fields": {
+            "name": "Order Received",
+            "serial": 1,
+            "color": "#23b848"
+        }
+    },
+    {
+        "model": "order.orderstatus",
+        "pk": 2,
+        "fields": {
+            "name": "Order Processing",
+            "serial": 2,
+            "color": "#d87b64"
+        }
+    },
+    {
+        "model": "order.orderstatus",
+        "pk": 3,
+        "fields": {
+            "name": "Ready To DisPut",
+            "serial": 3,
+            "color": "#d87b64"
+        }
+    },
+    {
+        "model": "order.orderstatus",
+        "pk": 4,
+        "fields": {
+            "name": "Order DisPuted",
+            "serial": 4,
+            "color": "#d87b64"
+        }
+    },
+    {
+        "model": "order.orderstatus",
+        "pk": 5,
+        "fields": {
+            "name": "At Local Facility",
+            "serial": 5,
+            "color": "#d87b64"
+        }
+    },
+    {
+        "model": "order.orderstatus",
+        "pk": 6,
+        "fields": {
+            "name": "Out For Delivery",
+            "serial": 6,
+            "color": "#d87b64"
+        }
+    },
+    {
+        "model": "order.orderstatus",
+        "pk": 7,
+        "fields": {
+            "name": "Delivered",
+            "serial": 11,
+            "color": "#d87b64"
+        }
+    },
+    {
+        "model": "order.orderstatus",
+        "pk": 8,
+        "fields": {
+            "name": "Failed to collect payment",
+            "serial": 8,
+            "color": "#d87b64"
+        }
+    },
+    {
+        "model": "order.orderstatus",
+        "pk": 9,
+        "fields": {
+            "name": "falied to contact Consignee",
+            "serial": 9,
+            "color": "#d87b64"
+        }
+    },
+    {
+        "model": "order.orderstatus",
+        "pk": 10,
+        "fields": {
+            "name": "Shipment Refused by Consignee",
+            "serial": 10,
+            "color": "#d87b64"
+        }
+    }
+]

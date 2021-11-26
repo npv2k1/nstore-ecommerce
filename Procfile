@@ -1,0 +1,1 @@
+web: gunicorn --workers 4 --worker-class nstore.asgi.gunicorn_worker.UvicornWorker nstore.asgi:application
