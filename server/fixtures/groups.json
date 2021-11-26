@@ -1,0 +1,56 @@
+[
+    {
+        "model": "product.group",
+        "pk": 1,
+        "fields": {
+            "name": "Grocery",
+            "slug": "Grocery",
+            "icon": "FruitsVegetable"
+        }
+    },
+    {
+        "model": "product.group",
+        "pk": 2,
+        "fields": {
+            "name": "Bakery",
+            "slug": "bakery",
+            "icon": "Bakery"
+        }
+    },
+    {
+        "model": "product.group",
+        "pk": 3,
+        "fields": {
+            "name": "Makeup",
+            "slug": "makeup",
+            "icon": "FacialCare"
+        }
+    },
+    {
+        "model": "product.group",
+        "pk": 4,
+        "fields": {
+            "name": "Bags",
+            "slug": "bags",
+            "icon": "Handbag"
+        }
+    },
+    {
+        "model": "product.group",
+        "pk": 5,
+        "fields": {
+            "name": "Clothing",
+            "slug": "clothing",
+            "icon": "DressIcon"
+        }
+    },
+    {
+        "model": "product.group",
+        "pk": 6,
+        "fields": {
+            "name": "Furniture",
+            "slug": "furniture",
+            "icon": "FurnitureIcon"
+        }
+    }
+]

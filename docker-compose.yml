@@ -1,0 +1,55 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql
+    volumes:
+      - "./data:/var/lib/mysql"
+    environment:
+      MYSQL_ROOT_PASSWORD: "root"
+      MYSQL_DATABASE: "storefront"
+      MYSQL_USER: "storefront"
+      MYSQL_PASSWORD: "vvTx6HvG@"
+    ports:
+      - "3306:3306"
+  server:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    command: python manage.py runserver 0.0.0.0:5000
+    volumes:
+      - ./server:/app
+      - static_volume:/app/static
+      - media_volume:/app/media
+    environment:
+      DB_PROVIDER: mysql
+      DEBUG: true
+      DB_NAME: storefront
+      DB_USER: storefront
+      DB_PASSWORD: vvTx6HvG@
+      DB_HOST: 'db'    
+    ports:
+      - "5000:5000"
+    depends_on:
+      - db
+  client:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    volumes:
+      - ./client:/usr/src/app
+      - /usr/src/app/node_modules
+      - /usr/src/app/.next
+    environment:
+      NEXT_PUBLIC_REST_API_ENDPOINT: "http://localhost:5000/"
+      NEXT_PUBLIC_SSR_REST_API_ENDPOINT: "http://server:5000/"
+    ports:
+      - "3000:3000"
+    depends_on:
+      - server
+volumes:
+  static_volume:
+  media_volume:
+networks:
+    nstore-network:
+        driver: bridge
