@@ -19,7 +19,6 @@ Các công nghệ sử dụng
 
 **Server:** Django, Mysql
 
-
 Cấu trúc thư mục của dự án
 
 ## Cách cài đặt và bắt đầu
@@ -44,9 +43,9 @@ Cái đặt package
   pipenv install
 ```
 
-* Nếu bị lỗi liên quan đến phiên bản python có thể vào file [Pipfile](./server/Pipfile) và thay đổi `python_version` nhưng yêu cầu python 3
-* Một số package có thể không cài được trên windows. vd: `uvloop`
-* Nếu vẫn gặp lỗi khi cài đặt package có thể là do phiên bản python hoặc do `Pipfile.lock` có thể thử xóa file này đi rồi cài lại hoặc sử dụng lệnh sau.
+- Nếu bị lỗi liên quan đến phiên bản python có thể vào file [Pipfile](./server/Pipfile) và thay đổi `python_version` nhưng yêu cầu python 3
+- Một số package có thể không cài được trên windows. vd: `uvloop`
+- Nếu vẫn gặp lỗi khi cài đặt package có thể là do phiên bản python hoặc do `Pipfile.lock` có thể thử xóa file này đi rồi cài lại hoặc sử dụng lệnh sau.
 
 ```bash
   pipenv install --skip-lock
@@ -59,9 +58,9 @@ Chạy
   python manage.py runserver 5000
 ```
 
-* Trang web sẽ chạy ở cổng 5000 nếu cổng 5000 đã có ứng dụng khác sử dụng thì có thể thay đổi thành cổng khác
+- Trang web sẽ chạy ở cổng 5000 nếu cổng 5000 đã có ứng dụng khác sử dụng thì có thể thay đổi thành cổng khác
 
-* Nếu sử dụng `gunicon`. gunicon chỉ hỗ trợ các hệ thông unix nên trên windows nó sẽ bị lỗi. Để khắc phục có thể chạy trên hệ thông `WSL` hoặc sử dụng docker.
+- Nếu sử dụng `gunicon`. gunicon chỉ hỗ trợ các hệ thông unix nên trên windows nó sẽ bị lỗi. Để khắc phục có thể chạy trên hệ thông `WSL` hoặc sử dụng docker.
 
   ```bash
   gunicorn --bind 0.0.0.0:5000 --workers 4 --worker-class nstore.asgi.gunicorn_worker.UvicornWorker nstore.asgi:application
@@ -72,21 +71,20 @@ Khởi tạo dữ liệu ban đầu:
 ```bash
 cd server
 python manage.py migrate
-python manage.py loaddata upload.json 
-python manage.py loaddata groups.json 
-python manage.py loaddata categories.json 
-python manage.py loaddata order_status.json 
+python manage.py loaddata upload.json
+python manage.py loaddata groups.json
+python manage.py loaddata categories.json
+python manage.py loaddata order_status.json
+python manage.py loaddata products.json
 ```
 
-* Khi load dữ liệu cần đảm bảo thứ tự. groups, uploads, categories.json, products, order_status vì một số cái yêu cầu quan hệ nên có cần có dữ liệu trước.
+- Khi load dữ liệu cần đảm bảo thứ tự. groups, uploads, categories.json, products, order_status vì một số cái yêu cầu quan hệ nên có cần có dữ liệu trước.
 
 Thu thập tệp tĩnh:
 
 ```bash
 python manage.py collectstatic
 ```
-
-
 
 ### **client**
 
@@ -108,18 +106,16 @@ chạy
   yarn dev
 ```
 
-* Trang web sẽ chạy ở cổng 3000
+- Trang web sẽ chạy ở cổng 3000
 
-* Có 2 biến môi trường cần lưu ý
+- Có 2 biến môi trường cần lưu ý
 
   ```
   # Api này sẽ được gọi khi web chạy ở client
-  NEXT_PUBLIC_REST_API_ENDPOINT="http://localhost:5000/" 
+  NEXT_PUBLIC_REST_API_ENDPOINT="http://localhost:5000/"
   # Api này sẽ gọi trong quá trình xây dựng.
   NEXT_PUBLIC_SSR_REST_API_ENDPOINT="http://localhost:5000/"
   ```
-
-  
 
 ### **database**
 
