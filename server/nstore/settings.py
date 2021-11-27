@@ -141,7 +141,7 @@ try:
         print("sqlite3 default")
 
 except Exception as e:
-    print("DB_PROVIDER not set. sqlite3 default")
+    # print("DB_PROVIDER not set. sqlite3 default")
     pass
 
 
