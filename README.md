@@ -45,7 +45,12 @@ Cái đặt package
 ```
 
 * Nếu bị lỗi liên quan đến phiên bản python có thể vào file [Pipfile](./server/Pipfile) và thay đổi `python_version` nhưng yêu cầu python 3
-* Một số package có thể không cài được trên windows.
+* Một số package có thể không cài được trên windows. vd: `uvloop`
+* Nếu vẫn gặp lỗi khi cài đặt package có thể là do phiên bản python hoặc do `Pipfile.lock` có thể thử xóa file này đi rồi cài lại hoặc sử dụng lệnh sau.
+
+```bash
+  pipenv install --skip-lock
+```
 
 Chạy
 
