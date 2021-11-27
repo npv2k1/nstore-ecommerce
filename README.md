@@ -107,7 +107,7 @@ chạy
 
 * Có 2 biến môi trường cần lưu ý
 
-  ```json
+  ```
   # Api này sẽ được gọi khi web chạy ở client
   NEXT_PUBLIC_REST_API_ENDPOINT="http://localhost:5000/" 
   # Api này sẽ gọi trong quá trình xây dựng.
@@ -120,7 +120,7 @@ chạy
 
 Mặc định sẽ dùng cơ sở dữ liệu `sqlite`. Nếu muốn chuyển qua `mysql` cần vào file [settings.py](./server/storefront/settings.py) để cài đặt. Hoặc thiết lập biến môi trường của server:
 
-```json
+```
 DB_PROVIDER="mysql"
 ```
 
