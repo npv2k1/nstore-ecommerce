@@ -67,7 +67,10 @@ Khởi tạo dữ liệu ban đầu:
 ```bash
 cd server
 python manage.py migrate
-python manage.py loaddata *.json
+python manage.py loaddata upload.json 
+python manage.py loaddata groups.json 
+python manage.py loaddata categories.json 
+python manage.py loaddata order_status.json 
 ```
 
 * Khi load dữ liệu cần đảm bảo thứ tự. groups, uploads, categories.json, products, order_status vì một số cái yêu cầu quan hệ nên có cần có dữ liệu trước.
