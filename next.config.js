@@ -23,11 +23,11 @@ module.exports = withPWA({
     ignoreBuildErrors: true,
   },
   // hotreload for docker
-  webpackDevMiddleware: (config) => {
-    config.watchOptions = {
-      poll: 1000,
-      aggregateTimeout: 300,
-    };
-    return config;
-  },
+  // webpackDevMiddleware: (config) => {
+  //   config.watchOptions = {
+  //     poll: 1000,
+  //     aggregateTimeout: 300,
+  //   };
+  //   return config;
+  // },
 });
