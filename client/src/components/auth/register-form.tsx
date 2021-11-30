@@ -67,7 +67,7 @@ const RegisterForm: React.FC<RegisterFormProps> = ({
           {...register('username')}
           variant="outline"
           className="mb-5"
-          error={t(errors.name?.message!)}
+          error={t(errors.username?.message!)}
         />
         <Input
           label={t('text-email')}
