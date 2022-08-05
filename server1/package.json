@@ -1,0 +1,13 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "python manage.py runserver 0.0.0.0:5000",
+    "db:migrations": "python manage.py makemigrations",
+    "db:migrate": "python manage.py migrate",
+    "db":"yarn db:migrations && yarn db:migrate",
+    "static": "python manage.py collectstatic"
+  },
+  "license": "MIT"
+}
