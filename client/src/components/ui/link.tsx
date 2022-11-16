@@ -6,11 +6,11 @@ export interface LinkProps extends NextLinkProps {
 
 const Link: React.FC<LinkProps> = ({ href, children, className, ...props }) => {
   return (
-    <NextLink href={href}>
-      <a className={className} {...props}>
-        {children}
-      </a>
-    </NextLink>
+    (<NextLink href={href} className={className} {...props}>
+
+      {children}
+
+    </NextLink>)
   );
 };
 
